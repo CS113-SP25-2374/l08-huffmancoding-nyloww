@@ -1,13 +1,16 @@
 public class Main {
     public static void main(String[] args) {
-        HuffmanInterface huffmanCoding = new HuffmanCoding();
+        HuffmanInterface huffman = new HuffmanCoding();
 
-        String message = "Your Name Goes Here";
+        String message = "Katanu Mwendwa";
 
-        String encoded = huffmanCoding.encode(message);
-        System.out.println(encoded);
+        String encoded = huffman.encode(message);
+        System.out.println("Encoded: " + encoded);
 
-        String decoded = huffmanCoding.decode(encoded);
-        System.out.println(decoded);
+        String decoded = huffman.decode(encoded);
+        System.out.println("Decoded: " + decoded);
+
+        System.out.println("Original size (bits): " + (message.length() * 16));
+        System.out.println("Compressed size (bits): " + encoded.length());
     }
 }
